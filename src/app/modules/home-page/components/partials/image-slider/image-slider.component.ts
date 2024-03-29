@@ -21,7 +21,16 @@ export class ImageSliderComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    setInterval(() => {
+      if (this.currentIndex === this.slides.length - 1) {
+        this.currentIndex = 0;
+      } else {
+        this.currentIndex++;
+      }
+      console.log(this.currentIndex);
+    }, 10000);
+  }
 
   getCurrentSlideUrl(): string {
     return `${this.slides[this.currentIndex].url}`;
