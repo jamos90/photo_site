@@ -4,6 +4,7 @@
   margin-top: 1vh;
 
   .image-slide-container {
+    background-color: black;
   }
 
   .image-back-ground {
@@ -16,17 +17,17 @@
   }
 
   .slide {
-    height: 80vh;
-    width: 80vw;
+    height: 95vh;
+    width: 120vw;
     object-fit: contain;
   }
 
   .slide-selector-container {
     position: absolute;
     left: 50%;
-    // bottom: 61%;
-
+    bottom: 0.5%;
     .slide-selector {
+      color: white;
       display: inline;
       &:hover {
         cursor: pointer;
