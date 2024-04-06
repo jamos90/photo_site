@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageModuleModule } from './modules/home-page/home-page-module.module';
 import { NavigationModule } from './modules/navigation/navigation.module';
+import { CategoriesModule } from './modules/categories/categories.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -12,7 +13,8 @@ import { NavigationModule } from './modules/navigation/navigation.module';
     BrowserModule,
     AppRoutingModule,
     HomePageModuleModule,
-    NavigationModule
+    NavigationModule,
+    CategoriesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
