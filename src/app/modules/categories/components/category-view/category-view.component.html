@@ -1,8 +1,5 @@
 <div class="container">
   <div class="image-container" *ngFor="let image of images; index as i">
-    <div class="image-item">
-      I'm an image: {{ category }}
-      <img class="slide" src="{{ image.url }}" />
-    </div>
+    <img class="image-item" src="{{ image.url }}" />
   </div>
 </div>
