@@ -5,12 +5,12 @@ import { DetailViewComponent } from './components/detail-view/detail-view.compon
 
 const routes: Routes = [
   {
-    path: '',
-    component: CategoryViewComponent,
-    children: [
-      { path: 'categories/:id', component: CategoryViewComponent },
-      { path: 'categories/:id/:imageId', component: DetailViewComponent }
-    ]
+    path: 'categories/:id',
+    component: CategoryViewComponent
+  },
+  {
+    path: 'categories/:id/:imageId',
+    component: DetailViewComponent
   }
 ];
 
