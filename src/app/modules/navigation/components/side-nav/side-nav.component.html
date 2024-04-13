@@ -7,7 +7,11 @@
   <div *ngIf="showMenu" class="category-list">
     <div class="close-icon" (click)="toggleMenu()">x</div>
     <div *ngFor="let category of categoriesArray" class="category-item">
-      <span class="category-title">{{ category.title }}</span>
+      <span
+        (click)="handleCategoryNavigation(category.code)"
+        class="category-title"
+        >{{ category.title }}</span
+      >
     </div>
   </div>
 </div>
