@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Categories } from 'src/app/interfaces/general-interfaces';
-import { animationFrame } from 'rxjs/internal/scheduler/animationFrame';
+import { Categories } from 'src/app/modules/navigation/interfaces/categories';
+import { RoutingService } from 'src/app/services/routing/routing.service';
 
 @Component({
   selector: 'app-side-nav',
@@ -11,6 +11,8 @@ export class SideNavComponent implements OnInit {
   @Input()
   categoriesArray!: Array<Categories>;
 
+  constructor(private routingService: RoutingService) {}
+
   showMenu: boolean = false;
   menuStyles = {
     width: '3vh',
@@ -19,12 +21,13 @@ export class SideNavComponent implements OnInit {
     margin: '6px 6px'
   };
 
-  constructor() {}
-
   ngOnInit(): void {}
 
   toggleMenu() {
     this.showMenu = !this.showMenu;
-    console.log('toggling menu', this.showMenu);
+  }
+
+  handleCategoryNavigation(categoryCode: String): void {
+    this.routingService.navigateToPath(`/categories/${categoryCode}`);
   }
 }

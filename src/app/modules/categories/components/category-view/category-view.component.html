@@ -1,3 +1,9 @@
-<div>
-  category view
+<div class="container">
+  <div class="image-container" *ngFor="let image of images; index as i">
+    <img
+      class="image-item"
+      src="{{ image.url }}"
+      (click)="navigateToImageDetail(image)"
+    />
+  </div>
 </div>

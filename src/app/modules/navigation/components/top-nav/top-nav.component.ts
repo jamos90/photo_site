@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RoutingService } from 'src/app/services/routing/routing.service';
 
 @Component({
   selector: 'app-top-nav',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-nav.component.scss']
 })
 export class TopNavComponent implements OnInit {
+  constructor(private routingService: RoutingService) {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  navigateHome(): void {
+    this.routingService.navigateToPath('/');
   }
-
 }
