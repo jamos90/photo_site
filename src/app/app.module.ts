@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomePageModuleModule } from './modules/home-page/home-page-module.module';
 import { NavigationModule } from './modules/navigation/navigation.module';
 import { CategoriesModule } from './modules/categories/categories.module';
+import { CategoriesRoutingModule } from './modules/categories/categories-routing.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,7 +15,8 @@ import { CategoriesModule } from './modules/categories/categories.module';
     AppRoutingModule,
     HomePageModuleModule,
     NavigationModule,
-    CategoriesModule
+    CategoriesModule,
+    CategoriesRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
