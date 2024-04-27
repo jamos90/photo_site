@@ -1,0 +1,40 @@
+.image-slider-container {
+  height: 90vh;
+  width: 100vw;
+  margin-top: 1vh;
+
+  .image-slide-container {
+    background-color: black;
+  }
+
+  .image-back-ground {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+  }
+
+  .slide {
+    height: 95vh;
+    width: 120vw;
+    object-fit: contain;
+  }
+
+  .slide-selector-container {
+    position: absolute;
+    left: 50%;
+    bottom: 0.5%;
+    .slide-selector {
+      color: white;
+      display: inline;
+      &:hover {
+        cursor: pointer;
+      }
+      &.selected {
+        color: goldenrod;
+      }
+    }
+  }
+}
